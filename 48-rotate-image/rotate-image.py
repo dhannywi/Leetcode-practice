@@ -3,9 +3,13 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
+        # for r in range(len(matrix)):
+        #     for c in range(r):
+        #         matrix[r][c], matrix[c][r] = matrix[c][r], matrix[r][c]
+        # for lst in matrix:
+        #     lst.reverse()
+        matrix.reverse()
         for r in range(len(matrix)):
             for c in range(r):
                 matrix[r][c], matrix[c][r] = matrix[c][r], matrix[r][c]
-        for lst in matrix:
-            lst.reverse()
                 
