@@ -5,13 +5,14 @@ class Solution:
         for c in s:
             if c.isalnum():
                 s_alnum += c.lower()
-        
-        left = 0
-        right = len(s_alnum) - 1
-        while left < right:
-            if s_alnum[left] != s_alnum[right]:
-                return False
-            else:
-                left += 1
-                right -= 1
-        return True
+        # two pointer approach
+        # left = 0
+        # right = len(s_alnum) - 1
+        # while left < right:
+        #     if s_alnum[left] != s_alnum[right]:
+        #         return False
+        #     else:
+        #         left += 1
+        #         right -= 1
+        # return True
+        return s_alnum == s_alnum[::-1]
