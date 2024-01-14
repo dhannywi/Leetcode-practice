@@ -1,5 +1,8 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        # check if ransomNote longer than magazine
+        if len(ransomNote) > len(magazine):
+            return False
         # store count of magizine character
         mg = {}
         for e in magazine:
