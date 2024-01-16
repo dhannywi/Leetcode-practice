@@ -3,7 +3,7 @@ class Solution:
         ans = []
         l, r = 0, len(nums)-1
         while l <= r: # appends largest value first
-            if nums[l]**2 > nums[r]**2:
+            if abs(nums[l]) > abs(nums[r]):
                 ans.append(nums[l]**2)
                 l += 1
             else:
