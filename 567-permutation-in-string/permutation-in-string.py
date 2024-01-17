@@ -9,12 +9,11 @@ class Solution:
         # store char count of s2 in a window
         pS2 = Counter()
         r = w
-        for i in range(len(s2)- w+1):
+        for i in range(len(s2)- w+1): # O(n+w)
             pS2 = Counter(s2[i:r])
             if pS2 == pS1:
                 return True
             else:
-                del pS2
                 r += 1
         return False
 
