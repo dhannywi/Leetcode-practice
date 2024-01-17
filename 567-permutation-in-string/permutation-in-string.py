@@ -1,7 +1,5 @@
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
-        if len(s1) > len(s2):
-            return False
         # store char count of s1
         pS1 = Counter(s1)
         # window size and right pointer
