@@ -10,6 +10,4 @@ class Solution:
         for i in t:
             t_count[i] = t_count.get(i, 0) +1
 
-        if s_count == t_count:
-            return True
-        return False
+        return s_count == t_count
