@@ -8,7 +8,7 @@ class Solution:
 
         # check 1st window permutation
         if pS2 == pS1:
-                return True
+            return True
 
         for i in range(w, len(s2)):
             # Update window by removing the leftmost character and adding the new character
