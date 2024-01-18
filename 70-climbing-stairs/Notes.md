@@ -1,4 +1,4 @@
-<h2>climbing-stairs Notes</h2><hr>Approach
+<h2>climbing-stairs Notes</h2><hr>Approach using 
 
 class Solution:
     def climbStairs(self, n: int) -> int:
