@@ -1,4 +1,6 @@
-<h2>climbing-stairs Notes</h2><hr>class Solution:
+<h2>climbing-stairs Notes</h2><hr>
+
+class Solution:
     def climbStairs(self, n: int) -> int:
         memo = {}
         memo[1] = 1
