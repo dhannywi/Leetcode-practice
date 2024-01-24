@@ -5,7 +5,7 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] == 1:
                 count += 1
-            elif nums[i] == 0:
+            else:
                 maxCount = max(maxCount, count)
                 count = 0
 
