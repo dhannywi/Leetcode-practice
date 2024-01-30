@@ -1,1 +1,1 @@
-<h2>top-k-frequent-elements Notes</h2><hr>[ Time taken: 12 m 42 s ]
+<h2>top-k-frequent-elements Notes</h2><hr>[ Time taken: 6 m 24 s ]
