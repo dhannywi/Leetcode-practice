@@ -10,19 +10,19 @@ class Solution:
         if window_size > n:
             return res
 
-        # prefix = [0]
-        # for i in range(1, n):
-        #     prefix.append(nums[i]+ prefix[-1])
-        # return prefix # [0,4,7,16,17,25,30,32,38]
+        tally = sum(nums[:window_size])
+        res[k] = tally // window_size
 
-        prefix = [0]*(n + 1)
-        for i in range(n):
-            prefix[i + 1] = prefix[i] + nums[i]
-        # return prefix # [0,7,11,14,23,24,32,37,39,45]
+        # [-1,-1,-1,5,4,4,-1,-1,-1]
+        for i in range(window_size, n):
+            tally = tally - nums[i - window_size] + nums[i]
+            res[i-k] = tally // window_size
 
-        for i in range(k, n-k):
-            res[i] = (prefix[i+k+1] - prefix[i-k])//window_size
         return res
+
+
+
+         
 
 
 
