@@ -9,14 +9,14 @@ class MovingAverage:
     def next(self, val: int) -> float:
         self.count += 1
         self.q.append(val)
+
         if self.count > self.size:
             tail = self.q.popleft()
+            self.currSum = self.currSum + val - tail
+            return self.currSum / self.size
         else:
-            tail = 0
-        
-        self.currSum = self.currSum + val - tail
-
-        return self.currSum / min(self.size, self.count)
+            self.currSum += val
+            return self.currSum / self.count
         
 
 
