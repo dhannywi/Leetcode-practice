@@ -11,8 +11,7 @@ class MovingAverage:
         self.q.append(val)
 
         if self.count > self.size:
-            tail = self.q.popleft()
-            self.currSum = self.currSum + val - tail
+            self.currSum = self.currSum + val - self.q.popleft()
             return self.currSum / self.size
         else:
             self.currSum += val
